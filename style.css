@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  background-image: linear-gradient(lightblue,white);
+}
+header{
+  text-align: center;
+  color: black;
+  padding: 5px;
+}
+.not-child {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  z-index:100 ;
+}
+.not-child img {
+  width: 90%;
+  max-width: 400px;
+  height: 90%;
+  max-height: 500px;
+}
+.not-child span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.container{
+  margin: 30px;
+  padding: 10px;
+  width: 90%;
+  height: 450px;
+ border: 10px solid rgb(153, 203, 245);
+ border-radius: 15PX;
+ margin-left: 70px;
+ overflow: scroll;
+}
+.img-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+.child{
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+img{
+  height: 300px;
+  width: 257px;
+  border-radius: 3px;
+}
+.intro{
+  top: 368px;
+  height:27px ;
+  width: 257px;
+  box-sizing: border-box;
+   position:fixed;
+  bottom: 300px;
+  background: rgb(22,27,2,-5);
+  color:rgb(246, 243, 239);
+}
+h3{
+  float: left;
+ font-size: 20px;
+ visibility: hidden;
+ opacity: 0;
+}
+.child:hover{
+  cursor: pointer;
+}
+.child:hover .intro{
+  height: 30px;
+  bottom: 2440px;
+  background: black;
+}
+.child:hover h3{
+  opacity: 1;
+  visibility: visible;
+}
+.child:hover img{
+  transform: scale(1.1) rotate(-3deg);
+}
